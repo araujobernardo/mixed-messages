@@ -21,3 +21,15 @@ const signDatabase = {
                 "This earth sign is a perfectionist at heart and isn’t afraid to improve skills through diligent and consistent practice.",
                 "In fact,  its extraordinary courage comes from its psychic abilities, which is what makes this sign one of the most complicated, dynamic signs of the zodiac."]
 }
+
+const randomMessage = (obj) => {
+    const randomBegining = Math.floor(Math.random() * obj.firstPart.length);
+    const randomMiddle = Math.floor(Math.random() * obj.secondPart.length);
+    const randomEnd = Math.floor(Math.random() * obj.thirdPart.length);
+
+    const message = `${obj.firstPart[randomBegining]} ${obj.secondPart[randomMiddle]} ${obj.thirdPart[randomEnd]}`
+
+    return message;
+}
+
+randomMessage(signDatabase);
