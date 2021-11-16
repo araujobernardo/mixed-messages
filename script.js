@@ -33,4 +33,10 @@ const personalityGenerator = (obj) => {
     return message;
 }
 
-personalityGenerator(personality);
+const nameGenerator = (obj) => {
+    const randomName = obj.names[Math.floor(Math.random() * obj.names.length)];
+    return randomName;
+}
+
+
+
