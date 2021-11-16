@@ -1,4 +1,5 @@
-const signDatabase = {
+const personality = {
+    names: ["Thato", "Ziv", "Fedlimid", "Kalei", "Enu", "Fatsani", "Shahar", "Esme", "Rajani", "Shui", "Imani" ],
     firstPart: ["They love to be number one.",
                 "What sign is more likely to take a six-hour bath, followed by a luxurious Swedish massage and decadent dessert spread?",
                 "Have you ever been so busy that you wished you could clone yourself just to get everything done?",
@@ -22,7 +23,7 @@ const signDatabase = {
                 "In fact,  its extraordinary courage comes from its psychic abilities, which is what makes this sign one of the most complicated, dynamic signs of the zodiac."]
 }
 
-const randomMessage = (obj) => {
+const personalityGenerator = (obj) => {
     const randomBegining = Math.floor(Math.random() * obj.firstPart.length);
     const randomMiddle = Math.floor(Math.random() * obj.secondPart.length);
     const randomEnd = Math.floor(Math.random() * obj.thirdPart.length);
@@ -32,4 +33,4 @@ const randomMessage = (obj) => {
     return message;
 }
 
-randomMessage(signDatabase);
+personalityGenerator(personality);
